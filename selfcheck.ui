@@ -16,231 +16,195 @@
   <property name="modal">
    <bool>true</bool>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>256</y>
-     <width>176</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>200</y>
-     <width>561</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <item>
-     <widget class="QLabel" name="label_17">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_18">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_19">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_20">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_21">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_22">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_23">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>20</y>
-     <width>561</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>控制盒</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>炮长</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>乘员1</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>乘员2</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>乘员3</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_8">
-      <property name="text">
-       <string>乘员4</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>乘员5</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>70</y>
-     <width>71</width>
-     <height>191</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>自检结果</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_9">
-      <property name="text">
-       <string>运行状态</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>100</y>
-     <width>561</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="QLabel" name="label_10">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_12">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_13">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_14">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_15">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_16">
-      <property name="text">
-       <string>无故障</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>控制盒</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>炮长</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>乘员1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>乘员2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>乘员3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>乘员4</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>乘员5</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" rowspan="3">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>自检结果</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>运行状态</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_17">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_18">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_19">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_20">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_21">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_22">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_23">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_16">
+       <property name="text">
+        <string>无故障</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>
