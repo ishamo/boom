@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include <QDialog>
+#include "file.h"
 
 namespace Ui {
 class Player;
@@ -22,6 +23,8 @@ private slots:
 
 private:
     Ui::Player *ui;
+    File *file;
+
 };
 
 #endif // PLAYER_H

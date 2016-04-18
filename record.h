@@ -2,6 +2,7 @@
 #define RECORD_H
 
 #include <QDialog>
+#include <QWidget>
 
 namespace Ui {
 class Record;
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::Record *ui;
+    QWidget *filesystem;
 };
 
 #endif // RECORD_H

@@ -18,18 +18,21 @@ SOURCES += main.cpp\
     argsetup.cpp \
     record.cpp \
     player.cpp \
-    telegram.cpp
+    telegram.cpp \
+    file.cpp
 
 HEADERS  += mainwindow.h \
     selfcheck.h \
     argsetup.h \
     record.h \
     player.h \
-    telegram.h
+    telegram.h \
+    file.h
 
 FORMS    += mainwindow.ui \
     selfcheck.ui \
     argsetup.ui \
     record.ui \
     player.ui \
-    telegram.ui
+    telegram.ui \
+    file.ui
