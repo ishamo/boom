@@ -27,3 +27,13 @@ void File::on_treeView_clicked(const QModelIndex &index)
     QString sPath = dirname->fileInfo(index).absoluteFilePath();
     ui->listView->setRootIndex(filename->setRootPath(sPath));
 }
+
+void File::on_listView_clicked(const QModelIndex &index)
+{
+    filepath = filename->fileInfo(index).absoluteFilePath();
+}
+
+void File::on_buttonBox_accepted()
+{
+    emit SendData(filepath);
+}

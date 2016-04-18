@@ -17,3 +17,13 @@ SelectPath::~SelectPath()
 {
     delete ui;
 }
+
+void SelectPath::on_buttonBox_accepted()
+{
+    emit SendData(filepath);
+}
+
+void SelectPath::on_treeView_clicked(const QModelIndex &index)
+{
+    filepath = filemodel->fileInfo(index).absoluteFilePath();
+}

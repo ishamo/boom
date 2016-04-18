@@ -18,11 +18,13 @@ public:
 
 private slots:
     void on_pushButton_4_clicked();
+    void ReceiveData(QString data);
 
 private:
     Ui::Record *ui;
     QWidget *filesystem;
     SelectPath *savepath;
+
 };
 
 #endif // RECORD_H

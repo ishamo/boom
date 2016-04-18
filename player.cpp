@@ -24,6 +24,13 @@ void Player::on_pushButton_clicked()
 void Player::on_pushButton_2_clicked()
 {
     file = new File;
+    connect(file, SIGNAL(SendData(QString)), this, SLOT(receiveData(QString)));
+   // connect(file, SIGNAL(SendData(QString)), this, SLOT(receiveData(QString)));
     file->setModal(true);
     file->exec();
+}
+
+void Player::receiveData(QString data)
+{
+    ui->label_6->setText(data);
 }
