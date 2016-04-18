@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     record.cpp \
     player.cpp \
     telegram.cpp \
-    file.cpp
+    file.cpp \
+    selectpath.cpp
 
 HEADERS  += mainwindow.h \
     selfcheck.h \
@@ -27,7 +28,8 @@ HEADERS  += mainwindow.h \
     record.h \
     player.h \
     telegram.h \
-    file.h
+    file.h \
+    selectpath.h
 
 FORMS    += mainwindow.ui \
     selfcheck.ui \
@@ -35,4 +37,5 @@ FORMS    += mainwindow.ui \
     record.ui \
     player.ui \
     telegram.ui \
-    file.ui
+    file.ui \
+    selectpath.ui

@@ -2,7 +2,7 @@
 #define RECORD_H
 
 #include <QDialog>
-#include <QWidget>
+#include "selectpath.h"
 
 namespace Ui {
 class Record;
@@ -22,6 +22,7 @@ private slots:
 private:
     Ui::Record *ui;
     QWidget *filesystem;
+    SelectPath *savepath;
 };
 
 #endif // RECORD_H
