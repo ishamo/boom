@@ -2,6 +2,9 @@
 #define SELFCHECK_H
 
 #include <QDialog>
+#include <QtGui>
+#include <QtCore>
+#include <QtWidgets>
 
 namespace Ui {
 class Selfcheck;
@@ -17,6 +20,7 @@ public:
 
 private:
     Ui::Selfcheck *ui;
+    QStandardItemModel *model;
 };
 
 #endif // SELFCHECK_H
