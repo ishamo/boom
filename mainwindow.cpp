@@ -8,6 +8,7 @@
 #include "player.h"
 #include "telegram.h"
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)

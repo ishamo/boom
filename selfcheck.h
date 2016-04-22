@@ -5,6 +5,7 @@
 #include <QtGui>
 #include <QtCore>
 #include <QtWidgets>
+#include <QUdpSocket>
 
 namespace Ui {
 class Selfcheck;
@@ -21,6 +22,7 @@ public:
 private:
     Ui::Selfcheck *ui;
     QStandardItemModel *model;
+    QUdpSocket *socket;
 };
 
 #endif // SELFCHECK_H
