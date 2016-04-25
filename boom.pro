@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     player.cpp \
     telegram.cpp \
     file.cpp \
-    selectpath.cpp
+    selectpath.cpp \
+    mydata.cpp
 
 HEADERS  += mainwindow.h \
     selfcheck.h \
@@ -29,7 +30,8 @@ HEADERS  += mainwindow.h \
     player.h \
     telegram.h \
     file.h \
-    selectpath.h
+    selectpath.h \
+    mydata.h
 
 FORMS    += mainwindow.ui \
     selfcheck.ui \
