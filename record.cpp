@@ -1,6 +1,6 @@
 #include "record.h"
 #include "ui_record.h"
-
+#include <stdlib.h>
 
 
 Record::Record(QWidget *parent) :
@@ -27,4 +27,20 @@ void Record::on_pushButton_4_clicked()
 void Record::ReceiveData(QString data)
 {
     ui->label->setText(data);
+}
+
+void Record::on_pushButton_2_clicked()
+{
+       QString program = "./path/to/Qt/examples/widgets/analogclock";
+       QStringList arguments;
+       arguments << "-style" << "fusion";
+
+       myProcess = new QProcess(this);
+       myProcess->start(program, arguments);
+}
+
+void Record::on_pushButton_3_clicked()
+{
+    if (myProcess)
+        myProcess->close();
 }

@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "selectpath.h"
+#include <QtCore>
+#include <QProcess>
 
 namespace Ui {
 class Record;
@@ -20,11 +22,15 @@ private slots:
     void on_pushButton_4_clicked();
     void ReceiveData(QString data);
 
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::Record *ui;
     QWidget *filesystem;
     SelectPath *savepath;
-
+    QProcess *myProcess;
 };
 
 #endif // RECORD_H

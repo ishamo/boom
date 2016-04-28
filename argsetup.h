@@ -2,7 +2,8 @@
 #define ARGSETUP_H
 
 #include <QDialog>
-
+#include <QUdpSocket>
+#include "mydata.h"
 namespace Ui {
 class Argsetup;
 }
@@ -15,8 +16,12 @@ public:
     explicit Argsetup(QWidget *parent = 0);
     ~Argsetup();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Argsetup *ui;
+    QUdpSocket *socket;
 };
 
 #endif // ARGSETUP_H

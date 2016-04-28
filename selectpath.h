@@ -29,6 +29,7 @@ private:
     QFileSystemModel *filemodel;
     QString filepath;
 
+
 };
 
 #endif // SELECTPATH_H
