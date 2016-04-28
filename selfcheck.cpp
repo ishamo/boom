@@ -105,13 +105,13 @@ void Selfcheck::readyRead()
     setlabel(Buffer[29], model->index(1, 7));
 
 
-    setlabel(Buffer[41], model->index(2, 1));
-    setlabel(Buffer[42], model->index(2, 2));
-    setlabel(Buffer[43], model->index(2, 3));
-    setlabel(Buffer[44], model->index(2, 4));
-    setlabel(Buffer[45], model->index(2, 5));
-    setlabel(Buffer[46], model->index(2, 6));
-    setlabel(Buffer[47], model->index(2, 7));
+    setlabel(Buffer[43], model->index(2, 1));
+    setlabel(Buffer[44], model->index(2, 2));
+    setlabel(Buffer[45], model->index(2, 3));
+    setlabel(Buffer[46], model->index(2, 4));
+    setlabel(Buffer[47], model->index(2, 5));
+    setlabel(Buffer[48], model->index(2, 6));
+    setlabel(Buffer[49], model->index(2, 7));
 
     /*
     for (int i = 0; i < 7; ++i){

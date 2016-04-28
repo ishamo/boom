@@ -24,6 +24,9 @@ private slots:
 private:
     Ui::Argsetup *ui;
     QUdpSocket *socket;
+
+public slots:
+    void readyRead();
 };
 
 #endif // ARGSETUP_H

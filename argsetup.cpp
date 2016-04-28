@@ -9,6 +9,7 @@ Argsetup::Argsetup(QWidget *parent) :
     ui->setupUi(this);
     socket = new QUdpSocket(this);
     socket->bind(8888);
+    connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
 }
 
 Argsetup::~Argsetup()
@@ -27,20 +28,6 @@ void Argsetup::on_pushButton_clicked()
 
     qint64 ret = socket->writeDatagram(Data.Header, 25, QHostAddress("192.168.0.100"), 8888);
     if (ret < 0) qDebug() << "Send Error";
-    if (socket->waitForReadyRead(200)){
-        QByteArray Buffer;
-        Buffer.resize(socket->pendingDatagramSize());
-        Buffer = socket->readAll();
-        //wrong
-
-        ui->label_5->setText(QVariant(Buffer[24]).toString());
-        ui->label_6->setText(QVariant(Buffer[25]).toString());
-        ui->label_7->setText(QVariant(Buffer[26]).toString());
-        ui->label_8->setText(QVariant(Buffer[27]).toString());
-        ui->label_9->setText(QVariant(Buffer[28]).toString());
-
-
-    }
 }
 
 void Argsetup::on_pushButton_2_clicked()
@@ -69,4 +56,22 @@ void Argsetup::on_pushButton_2_clicked()
     Data.append(quint8(tmp >> 8));
     Data.append(quint8(tmp));
     socket->writeDatagram(Data, QHostAddress("192.168.0.100"), 8888);
+}
+
+void Argsetup::readyRead()
+{
+    QByteArray Buffer;
+    Buffer.resize(socket->pendingDatagramSize());
+    QHostAddress Sender;
+    quint16 Port;
+    socket->readDatagram(Buffer.data(), Buffer.size(), &Sender, &Port);
+
+    qDebug() << Buffer;
+
+    ui->label_5->setText(QVariant(Buffer[24]).toString());
+    ui->label_6->setText(QVariant(Buffer[25]).toString());
+    ui->label_7->setText(QVariant(Buffer[26]).toString());
+    ui->label_8->setText(QVariant(Buffer[27]).toString());
+    ui->label_9->setText(QVariant(Buffer[28]).toString());
+    socket->close();
 }
