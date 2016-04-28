@@ -34,21 +34,18 @@ MyData::MyData()
 quint16 MyData::crc(char * message, int len)
 {
     //write the crc code there.
-        int i,j;
-        quint16 crc_reg;
-        quint16 current;
-        for(i = 0; i < len; i++){
-            current = message[i] << 8;
-            for(j = 0; j < 8; j++){
-                if((short)(crc_reg^current) < 0){
-                    crc_reg = (crc_reg << 1)^0x1021;
-                }else{
-                    crc_reg <<= 1;
-                }
-                current <<= 1;
-            }
-        }
 
-        return crc_reg;
+    quint16 crc=0xffff;
+    quint8 j, ctemp = 0;
+    for (int i = 0; i < len; i++){
+        crc=crc^message[i];
+        for (j = 0; j < 8; j++){
+            ctemp = (crc&0x0001);
+            crc=(crc>>1);
+            if (ctemp)
+                crc=crc^0xa001;
+        }
+    }
+    return (crc>>8) + (crc<<8);
 }
 
