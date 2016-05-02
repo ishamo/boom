@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     telegram.cpp \
     file.cpp \
     selectpath.cpp \
-    mydata.cpp
+    mydata.cpp \
+    myfilepath.cpp
 
 HEADERS  += mainwindow.h \
     selfcheck.h \
@@ -31,7 +32,8 @@ HEADERS  += mainwindow.h \
     telegram.h \
     file.h \
     selectpath.h \
-    mydata.h
+    mydata.h \
+    myfilepath.h
 
 FORMS    += mainwindow.ui \
     selfcheck.ui \
@@ -40,4 +42,5 @@ FORMS    += mainwindow.ui \
     player.ui \
     telegram.ui \
     file.ui \
-    selectpath.ui
+    selectpath.ui \
+    myfilepath.ui

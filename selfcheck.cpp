@@ -47,7 +47,7 @@ Selfcheck::Selfcheck(QWidget *parent) :
     Data.Header[24] = (qint8)tmp;
 
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
-    QByteArray sendBuf(Data.Header, 25);
+    QByteArray sendBuf((char*)Data.Header, 25);
     qint64 ret = socket->writeDatagram(sendBuf, QHostAddress("192.168.0.100"), 8888);
     if (ret<=0) qDebug() << "Send error";
     /*

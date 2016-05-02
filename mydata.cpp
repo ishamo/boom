@@ -31,7 +31,7 @@ MyData::MyData()
     Header[24] = 0;
 }
 
-quint16 MyData::crc(char * message, int len)
+quint16 MyData::crc(unsigned char * message, int len)
 {
     //write the crc code there.
 

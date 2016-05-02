@@ -2,7 +2,11 @@
 #define PLAYER_H
 
 #include <QDialog>
-#include "file.h"
+//#include "file.h"
+#include <QUdpSocket>
+#include <QtWidgets>
+#include <QFileSystemModel>
+#include "myfilepath.h"
 
 namespace Ui {
 class Player;
@@ -23,9 +27,16 @@ private slots:
 
     void receiveData(QString data);
 
+    void on_listView_clicked(const QModelIndex &index);
+
 private:
     Ui::Player *ui;
-    File *file;
+   // File *file;
+    QUdpSocket *socket;
+    MyFilePath *filepath;
+    QFileSystemModel *filemodel;
+    QString labelpath;
+    QString filename;
 
 };
 
