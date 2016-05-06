@@ -2,6 +2,7 @@
 #define TELEGRAM_H
 
 #include <QDialog>
+#include <QStringListModel>
 
 namespace Ui {
 class Telegram;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::Telegram *ui;
+    QStringListModel *listmodel;
 };
 
 #endif // TELEGRAM_H

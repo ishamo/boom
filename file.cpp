@@ -8,7 +8,7 @@ File::File(QWidget *parent) :
     ui->setupUi(this);
     filename = new QFileSystemModel(this);
     dirname = new QFileSystemModel(this);
-    QString spath = "/home/ishamo";
+    QString spath = QDir::currentPath();
     filename->setRootPath(spath);
     dirname->setRootPath(spath);
     filename->setFilter(QDir::NoDotAndDotDot | QDir::Files);

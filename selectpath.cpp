@@ -7,7 +7,7 @@ SelectPath::SelectPath(QWidget *parent) :
 {
     ui->setupUi(this);
     filemodel = new QFileSystemModel(this);
-    QString spath = "/home/ishamo";
+    QString spath = QDir::currentPath();
     filemodel->setRootPath(spath);
     filemodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs);
     ui->treeView->setModel(filemodel);

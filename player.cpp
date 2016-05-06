@@ -7,7 +7,9 @@ Player::Player(QWidget *parent) :
     ui(new Ui::Player)
 {
     ui->setupUi(this);
-    ui->label_6->setText("/home/ishamo/code/qt/speech");
+    QString spath = QDir::currentPath();
+    spath += "/speech/";
+    ui->label_6->setText(spath);
     socket = new QUdpSocket(this);
     socket->bind(61001);
     filemodel = new QFileSystemModel(this);

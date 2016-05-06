@@ -41,10 +41,23 @@ void Argsetup::on_pushButton_2_clicked()
     QVariant str2 = ui->lineEdit_2->text();
     QVariant str3 = ui->lineEdit_3->text();
     QVariant str4 = ui->lineEdit_4->text();
-    QVariant str5 = ui->lineEdit_5->text();
+    QVariant str5 = ui->lineEdit_5->text();    //xing dao
+
+    QVariant str6 = ui->lineEdit_6->text();
+    QVariant str7 = ui->lineEdit_7->text();
+    QVariant str8 = ui->lineEdit_8->text();
+    QVariant str9 = ui->lineEdit_9->text();
+
+    QVariant str10 = ui->lineEdit_10->text();
+    QVariant str11 = ui->lineEdit_11->text();
+    QVariant str12 = ui->lineEdit_12->text();
+    QVariant str13 = ui->lineEdit_13->text();
+
+
     MyData mydata;
     QByteArray Data;
     Data.resize(57);
+
     for (int i = 0; i < 17; ++i) Data[i] = mydata.Header[i];
     Data[17] = 0;
     Data[18] = 0;
@@ -52,31 +65,38 @@ void Argsetup::on_pushButton_2_clicked()
     Data[20] = 17;
     Data[21] = 0;
     Data[22] = 32;
+
     Data[23] = str1.toInt();
     Data[24] = str2.toInt();
     Data[25] = str3.toInt();
     Data[26] = str4.toInt();
-    Data[27] = str5.toInt();
 
-    for (int i = 28; i < 55; ++i) Data[i] = 0;
+    Data[27] = str6.toInt();
+    Data[28] = str7.toInt();
+    Data[29] = str8.toInt();
+    Data[30] = str9.toInt();
+
+    Data[31] = str10.toInt();
+    Data[32] = str11.toInt();
+    Data[33] = str12.toInt();
+    Data[34] = str13.toInt();
+
+    Data[35] = str5.toInt();
+
+   // for (int i = 28; i < 55; ++i) Data[i] = 0;
     unsigned char temp[57] = {};
     for (int i = 0; i < 57; ++i) temp[i] = Data[i];
     quint16 tmp =   mydata.crc(temp+14, 41);
-    //quint16 tmp=0;
+
     qDebug() << "tmp = " << tmp;
     Data[55] = quint8(tmp >> 8);
     Data[56] = quint8(tmp);
-    temp[55] = Data[55];
-    temp[56] = Data[56];
-/*
-    Data[55] = 0x6e;
-    Data[56] = 0x14;
-*/
+
 
     qDebug() << Data << "..." << Data.size();
-    //qDebug() << "temp = " << temp;
+
     socket->writeDatagram(Data, QHostAddress("192.168.0.100"), 8888);
-    //socket->writeDatagram(temp, 57, QHostAddress("192.168.0.100"), 8888);
+
 }
 
 void Argsetup::readyRead()

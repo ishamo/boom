@@ -6,6 +6,11 @@ Telegram::Telegram(QWidget *parent) :
     ui(new Ui::Telegram)
 {
     ui->setupUi(this);
+    listmodel = new QStringListModel(this);
+    QStringList list;
+    list << "a" << "b" << "c";
+    listmodel->setStringList(list);
+    ui->listView->setModel(listmodel);
 }
 
 Telegram::~Telegram()

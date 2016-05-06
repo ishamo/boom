@@ -20,6 +20,7 @@ MyFilePath::~MyFilePath()
 
 void MyFilePath::on_treeView_clicked(const QModelIndex &index)
 {
-    dirpath = filemodel->fileInfo(index).absoluteDir().absolutePath();
+    dirpath = filemodel->fileInfo(index).absoluteFilePath();
+    //dirpath = filemodel->fileInfo(index).absoluteDir().absolutePath();
     emit SendPath(dirpath);
 }

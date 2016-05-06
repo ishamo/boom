@@ -49,9 +49,4 @@ void MainWindow::on_pushButton_4_clicked()
     player.exec();
 }
 
-void MainWindow::on_pushButton_5_clicked()
-{
-    Telegram telegram;
-   telegram.setModal(true);
-   telegram.exec();
-}
+

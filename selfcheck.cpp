@@ -9,7 +9,8 @@ Selfcheck::Selfcheck(QWidget *parent) :
     ui->setupUi(this);
     model = new QStandardItemModel(3, 8);
     ui->tableView->setModel(model);
-
+    ui->tableView->verticalHeader()->hide();
+    ui->tableView->horizontalHeader()->hide();
     QModelIndex index = model->index(1, 0);
     model->setData(index, "自检结果");
 
@@ -86,6 +87,27 @@ void Selfcheck::setlabel(quint8 data, QModelIndex index)
     model->setData(index, message);
 }
 
+void Selfcheck::setrun(quint8 data, QModelIndex index)
+{
+    quint8 flag = 1;
+    QString message;
+
+    if(data==0xff){
+        message+="状态未知";
+    }else
+    {
+        if (data & flag) message += "PTT控发";
+        else message += "PTT未控发";
+        if (data & flag << 1) message += "炮手断";
+        else message += "炮手通";
+        //if (data & flag << 2) message += "无线关";
+        //else message += "无线开";
+       // if (data & flag << 3) message += "无线单元故障";
+       // if (data & flag << 4) message += "无线模块故障";
+    }
+    model->setData(index, message);
+}
+
 void Selfcheck::readyRead()
 {
     QByteArray Buffer;
@@ -105,13 +127,13 @@ void Selfcheck::readyRead()
     setlabel(Buffer[29], model->index(1, 7));
 
 
-    setlabel(Buffer[43], model->index(2, 1));
-    setlabel(Buffer[44], model->index(2, 2));
-    setlabel(Buffer[45], model->index(2, 3));
-    setlabel(Buffer[46], model->index(2, 4));
-    setlabel(Buffer[47], model->index(2, 5));
-    setlabel(Buffer[48], model->index(2, 6));
-    setlabel(Buffer[49], model->index(2, 7));
+    setrun(Buffer[43], model->index(2, 1));
+    setrun(Buffer[44], model->index(2, 2));
+    setrun(Buffer[45], model->index(2, 3));
+    setrun(Buffer[46], model->index(2, 4));
+    setrun(Buffer[47], model->index(2, 5));
+    setrun(Buffer[48], model->index(2, 6));
+    setrun(Buffer[49], model->index(2, 7));
 
     /*
     for (int i = 0; i < 7; ++i){
